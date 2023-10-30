@@ -1,0 +1,55 @@
+Common errors when working with stable coin studio --
+
+
+
+1. Error when creating a new stable coin : 
+
+i. Check your account balance and ensure you have enough HBars (at least 10 to begin with)
+ii. Reduce your initial number of tokens and maximum number of tokens (in case of finite token limit)
+iii. Make sure not to use special characters / spaces in token name and symbol.
+
+2. Error when loading an existing stable coin :
+
+i. This is usually due to network congestion, try to reload the stable coin. Might take upto 5-6 tries.
+
+3. Error when connecting to metamask or hash pack account : 
+
+i. Make sure you have an active account on Hedera testate / preview net / main net depending upon which network you are working on.
+
+ii. This issue may also be due to network congestion, try to reconnect. Might take upto 5-6 tries.
+
+4. Error when trying to cash-in the token to an account : 
+
+Error -- "This account is not associated with this token"
+
+i. If using hash pack wallet : 
+	- Open your wallet and go to the connected account
+	- Under the tokens tab, select "Add token" (maybe represented by a + sign)
+	- Here add the token id which you are trying to cash-in. (Token id is given in the tab where you have loaded the token for operating on it. It is in 0.0.XXX... format)
+	- Once the token ID is added, all the details related to the token will automatically be loaded on the hash pack page.
+	- Check all details and confirm adding this token.
+	- Now your account is associated with this token and you may proceed with token operations in stable coin studio.
+
+ii. If using Metamask wallet :
+	- Open the stable coin-studio project in VS Code.
+	- Open the folder "helper_files" and open a new VS Code terminal.
+	- First, rename the .env.sample to .env
+	- Add the admin account ID & private key under "MY_ACCOUNT_ID" & "MY_PRIVATE_KEY"
+	- Add the user account ID & private key under "USER_ACCOUNT_ID" & "USER_PRIVATE_KEY"
+	- Here admin is the account that is operating the stable coin studio & user is the account that wants to cash-in the tokens. If both are same, just add admin details and skip user details.
+	- Note, it is important to add both admin and user details even if token association is required for user only.
+	- Next, open associateToken.js in VS Code.
+	- Here two functions are given - one is for associating the admin with the token and second is for associating the user with the token.
+	- First add the token ID here : const TokenId = "0.0.XXXXXXX";
+	- Comment out the irrelevant function, if association is needed only for one account (either admin or user)
+	- If association is needed for both accounts, keep the file as it is.
+	- After making required changes, save the file and type this command in the newly opened VS code terminal : node associateToken.js
+	- After successful token association, you will receive confirmation on the VS code terminal.
+	- Now you can go back to stable coin studio and try to cash-in with the newly associated account.
+
+
+5. How to transfer tokens using stable coin studio : This feature is not available in stable coin studio as per current Hedera guidelines. To make token transfers, import the token into your wallet  - Hashpack or Metamask, and do the transfers from there. Transfer many fail if the receiving account is not associated with the token. For this, refer point no.4 
+
+For any further errors / queries refer the "Important Reference Links" document given in this repo.
+
+Thank you. 

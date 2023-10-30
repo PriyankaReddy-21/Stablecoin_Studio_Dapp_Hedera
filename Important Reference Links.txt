@@ -1,0 +1,29 @@
+
+
+1. For Stablecoin studio installation, configuration of CLI & Web App UI, creation of a new stable coin --
+
+https://www.youtube.com/watch?v=eThs08nUsLI
+
+2. For stable coin operations --
+
+https://www.youtube.com/watch?v=41ag-y9cYck
+
+3. Documentation on stable coin operations --
+
+https://docs.hedera.com/hedera/open-source-solutions/stablecoin-studio/cli-management#factory-contracts
+
+4. Stablecoin studio detailed documentation -
+
+https://github.com/hashgraph/stablecoin-studio#technologies
+
+5. Stablecoin studio smart contracts - 
+
+https://github.com/hashgraph/stablecoin-studio/blob/main/contracts/README.md
+
+6. Stablecoin studio official link -
+
+https://docs.hedera.com/hedera/open-source-solutions/stablecoin-studio
+
+7. Step by step instructions on Stablecoin Studio DApp 
+
+https://docs.hedera.com/hedera/open-source-solutions/stablecoin-studio/web-ui-application#install-stablecoin-studio
